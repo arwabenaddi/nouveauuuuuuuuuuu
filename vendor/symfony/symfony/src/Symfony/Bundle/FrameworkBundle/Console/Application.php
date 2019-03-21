@@ -61,7 +61,8 @@ class Application extends BaseApplication
      */
     public function doRun(InputInterface $input, OutputInterface $output)
     {
-        $this->kernel->reboot();
+        
+        $this->kernel->boot();
 
         $this->setDispatcher($this->kernel->getContainer()->get('event_dispatcher'));
 
